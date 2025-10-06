@@ -292,7 +292,7 @@ section {
 
 .services-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   align-items: center;
   gap: 2.5rem;
 }
@@ -326,7 +326,7 @@ section {
 }
 
 .service-info h4 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin: 2rem 0;
   font-weight: 800;
 }
@@ -348,7 +348,7 @@ section {
 .projects-box {
   display: grid;
   grid-template-columns: repeat(auto-fit,
-      minmax(350px, 1fr));
+      minmax(250px, 1fr));
   place-items: center;
   gap: 3rem;
   row-gap: 5rem;
@@ -381,7 +381,6 @@ section {
   height: 200px;
   border-radius: 2em;
   object-fit: cover;
-
 }
 
 .project-card h3 {
@@ -396,16 +395,21 @@ section {
   color: var(--muted-text);
 
   /* Giới hạn số dòng (3 dòng) */
-  display: -webkit-box;       /* bắt buộc cho -webkit-line-clamp */
+  display: -webkit-box;
+  /* bắt buộc cho -webkit-line-clamp */
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;     /* Chrome, Safari, Opera */
+  -webkit-line-clamp: 3;
+  /* Chrome, Safari, Opera */
   overflow: hidden;
   text-overflow: ellipsis;
 
   /* Chuẩn CSS mới */
-  display: box;               /* fallback */
-  box-orient: vertical;       /* fallback */
-  line-clamp: 3;              /* chuẩn CSS (future-proof) */
+  display: box;
+  /* fallback */
+  box-orient: vertical;
+  /* fallback */
+  line-clamp: 3;
+  /* chuẩn CSS (future-proof) */
 }
 
 .contact {
@@ -585,5 +589,4 @@ section {
   .contact form {
     flex-direction: column;
   }
-
 }
