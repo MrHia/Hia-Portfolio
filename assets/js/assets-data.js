@@ -65,4 +65,57 @@ const PROJECT_LINKS = {
   bikeObby: "https://appmagic.rocks/google-play/bike-master-parkour-challenge/bikeparkour.bmxrace.obbybike?infoCountry=US",
   dinoRace: "https://web.telegram.org/k/#@dinorace_bot"
 };
-// ============ END ASSETS & LINKS DATA ============
+
+// ============ THEME DEFINITIONS ============
+const THEMES = {
+  default: {
+    name: "Red",
+    mainColor: "#b74b4b",
+    accentColor: "#ff7a18",
+    gradient: "linear-gradient(90deg, #b74b4b, #ff7a18)"
+  },
+  blue: {
+    name: "Blue",
+    mainColor: "#007AFF",
+    accentColor: "#00D4FF",
+    gradient: "linear-gradient(90deg, #007AFF, #00D4FF)"
+  },
+  green: {
+    name: "Green",
+    mainColor: "#00C853",
+    accentColor: "#76FF03",
+    gradient: "linear-gradient(90deg, #00C853, #76FF03)"
+  },
+  purple: {
+    name: "Purple",
+    mainColor: "#AA00FF",
+    accentColor: "#E040FB",
+    gradient: "linear-gradient(90deg, #AA00FF, #E040FB)"
+  },
+  gold: {
+    name: "Gold",
+    mainColor: "#FFAB00",
+    accentColor: "#FFD600",
+    gradient: "linear-gradient(90deg, #FFAB00, #FFD600)"
+  },
+  pink: {
+    name: "Pink",
+    mainColor: "#FF4081",
+    accentColor: "#FF80AB",
+    gradient: "linear-gradient(90deg, #FF4081, #FF80AB)"
+  },
+  teal: {
+    name: "Teal",
+    mainColor: "#00BFA5",
+    accentColor: "#1DE9B6",
+    gradient: "linear-gradient(90deg, #00BFA5, #1DE9B6)"
+  },
+  sunset: {
+    name: "Sunset",
+    mainColor: "#FF6B35",
+    accentColor: "#F7C59F",
+    gradient: "linear-gradient(90deg, #FF6B35, #F7C59F)"
+  }
+};
+
+// ============ END THEME DEFINITIONS ============

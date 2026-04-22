@@ -1,8 +1,46 @@
+// ============ THEME SWITCHER ============
+function initThemeSwitcher() {
+  const themeSelect = document.getElementById('theme-select');
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'default';
+
+  generateThemeOptions();
+
+  applyTheme(savedTheme);
+
+  themeSelect.addEventListener('change', (e) => {
+    const themeKey = e.target.value;
+    applyTheme(themeKey);
+    localStorage.setItem('portfolio-theme', themeKey);
+  });
+}
+
+function generateThemeOptions() {
+  const themeSelect = document.getElementById('theme-select');
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'default';
+
+  themeSelect.innerHTML = Object.entries(THEMES).map(([key, theme]) => `
+    <option value="${key}" ${key === savedTheme ? 'selected' : ''}>${theme.name}</option>
+  `).join('');
+}
+
+function applyTheme(themeKey) {
+  const theme = THEMES[themeKey];
+  if (!theme) return;
+
+  const root = document.documentElement;
+  root.style.setProperty('--main-color', theme.mainColor);
+  root.style.setProperty('--accent-color', theme.accentColor);
+  root.style.setProperty('--gradient', theme.gradient);
+  root.style.setProperty('--shadow-glow', `0 0 25px ${theme.mainColor}`);
+}
+// ============ END THEME SWITCHER ============
+
 // ============ ASSETS INITIALIZATION ============
 // Initialize links from assets-data.js
 
 document.addEventListener('DOMContentLoaded', () => {
   initLinksFromAssets();
+  initThemeSwitcher();
   renderProjects();
 });
 
